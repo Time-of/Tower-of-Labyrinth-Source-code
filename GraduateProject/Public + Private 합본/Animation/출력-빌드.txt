@@ -1,0 +1,28 @@
+﻿빌드 시작...
+1>------ 빌드 시작: 프로젝트: GraduateProject, 구성: Development_Editor x64 ------
+1>Using 'git status' to determine working set for adaptive non-unity build (E:\UE4 Project\Graduate-Game-Project).
+1>Parsing headers for GraduateProjectEditor
+1>  Running UnrealHeaderTool "E:\UE4 Project\Graduate-Game-Project\GraduateProject\GraduateProject.uproject" "E:\UE4 Project\Graduate-Game-Project\GraduateProject\Intermediate\Build\Win64\GraduateProjectEditor\Development\GraduateProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\lee\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+1>LogInit: Display: Loading text-based GConfig....
+1>Reflection code generated for GraduateProjectEditor in 4.6795032 seconds
+1>Deleted hot-reload file: E:\UE4 Project\Graduate-Game-Project\GraduateProject\Binaries\Win64\UE4Editor-GraduateProject-0001.dll
+1>Deleted hot-reload file: E:\UE4 Project\Graduate-Game-Project\GraduateProject\Binaries\Win64\UE4Editor-GraduateProject-0001.pdb
+1>Deleted hot-reload file: E:\UE4 Project\Graduate-Game-Project\GraduateProject\Binaries\Win64\UE4Editor-GraduateProject-0145.dll
+1>Deleted hot-reload file: E:\UE4 Project\Graduate-Game-Project\GraduateProject\Binaries\Win64\UE4Editor-GraduateProject-0145.pdb
+1>Deleted hot-reload file: E:\UE4 Project\Graduate-Game-Project\GraduateProject\Intermediate\Build\Win64\UE4Editor\Development\GraduateProject\UE4Editor-GraduateProject-0001.lib
+1>Deleted hot-reload file: E:\UE4 Project\Graduate-Game-Project\GraduateProject\Intermediate\Build\Win64\UE4Editor\Development\GraduateProject\UE4Editor-GraduateProject-0145.lib
+1>Building GraduateProjectEditor...
+1>Using Visual Studio 2022 14.34.31937 toolchain (E:\VS 2022\VC\Tools\MSVC\14.34.31933) and Windows 10.0.22621.0 SDK (F:\Windows 10 SDK).
+1>Building 6 actions with 8 processes...
+1>  [1/6] GraduateProject.init.gen.cpp
+1>  [2/6] N_PlayFootstepSound.gen.cpp
+1>  [3/6] N_PlayFootstepSound.cpp
+1>  [4/6] UE4Editor-GraduateProject.lib
+1>     E:\UE4 Project\Graduate-Game-Project\GraduateProject\Intermediate\Build\Win64\UE4Editor\Development\GraduateProject\UE4Editor-GraduateProject.lib 라이브러리 및 E:\UE4 Project\Graduate-Game-Project\GraduateProject\Intermediate\Build\Win64\UE4Editor\Development\GraduateProject\UE4Editor-GraduateProject.exp 개체를 생성하고 있습니다.
+1>  [5/6] UE4Editor-GraduateProject.dll
+1>     E:\UE4 Project\Graduate-Game-Project\GraduateProject\Intermediate\Build\Win64\UE4Editor\Development\GraduateProject\UE4Editor-GraduateProject.suppressed.lib 라이브러리 및 E:\UE4 Project\Graduate-Game-Project\GraduateProject\Intermediate\Build\Win64\UE4Editor\Development\GraduateProject\UE4Editor-GraduateProject.suppressed.exp 개체를 생성하고 있습니다.
+1>  [6/6] GraduateProjectEditor.target
+1>Total time in Parallel executor: 2.36 seconds
+1>Total execution time: 7.74 seconds
+========== 빌드: 1개 성공, 0개 실패, 0개 최신 상태, 0개 건너뜀 ==========
+========== 00:10.660 경과 ==========
