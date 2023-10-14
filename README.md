@@ -1,7 +1,15 @@
 ---
 # Tower-of-Labyrinth-Source-code
- Tower of Labyrinth 개발 시 작성했던 소스 코드 모음입니다.
+ Tower of Labyrinth 개발 시 작성했던 소스 코드 모음입니다.  
 
+**해당 Repository에 업로드된 코드들은 모두 이성수(본인)에 의해 작성되었음을 알립니다**  
+
+<br>
+
+다른 코드를 참고하여 작성한 코드: GameAssetManager, AbilitySystemCompBase, GEC_DamageExecution, AttributeSetBase  
+위 4가지 클래스는 Epic Games의 Action RPG 예제 프로젝트를 참고하여 작성하였음을 알립니다.  
+
+<br>
 
  ---
 
