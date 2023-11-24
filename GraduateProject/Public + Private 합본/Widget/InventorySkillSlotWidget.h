@@ -9,10 +9,10 @@
 
 #include "InventorySkillSlotWidget.generated.h"
 
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnMouseEnterSkillSlotDelegate, UItem_CharacterSkillBase*, SkillHas);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnMouseLeaveSkillSlotDelegate, UItem_CharacterSkillBase*, SkillHas);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSkillButtonClickedDelegate, EEnemyAbilityID, AbilityID);
-
 
 
 /**
@@ -29,9 +29,10 @@ public:
 	UInventorySkillSlotWidget(const FObjectInitializer& ObjectInitializer);
 
 	UFUNCTION()
-	void UpdateSlot(class UItem_CharacterSkillBase* SkillItem);
+	void UpdateSlot(class UItem_CharacterSkillBase* SkillItem, bool bIsHUD = false);
 
-	FORCEINLINE void UpdateSkillKeyText(const FString& TextToUpdate);
+	/** @brief 스킬 단축키 텍스트 업데이트 */
+	void UpdateSkillKeyText(const FString& TextToUpdate);
 
 	virtual void NativeConstruct() override;
 
@@ -41,6 +42,20 @@ public:
 
 	virtual void NativeOnMouseLeave(const FPointerEvent& InMouseEvent) override;
 
+	/**
+	* @brief 스킬 코스트에 따라 버튼 활성화 여부를 새로고침하는 함수.
+	* @details PlayerSkillHudWidget에서 스킬 사용 여부에 따라 사용 가능한 스킬을 직관적으로 표시하기 위해 사용
+	*/
+	void RefreshButtonActivationBySkillCost(float CurrentPlayerSkillMana);
+
+	/**
+	* @brief 스킬 마나 float 변수 새로고침.
+	* @details HUD인 경우 UpdateSlot()에서 호출, 스킬 마나 사용량 배수가 변경되면 HUD에서 수동으로 호출
+	*/
+	void RefreshSkillManaUsage(float NewSkillManaUsageRate);
+
+	void UpdateSkillManaUsageText();
+
 
 
 	UPROPERTY(BlueprintAssignable, Category = "Inventory|Skill")
@@ -48,7 +63,6 @@ public:
 
 	UPROPERTY(BlueprintAssignable, Category = "Inventory|Skill")
 	FOnMouseLeaveSkillSlotDelegate OnMouseLeaveFromSlot;
-
 	
 
 	EEnemyAbilityID AbilityID;
@@ -74,4 +88,11 @@ protected:
 
 	UPROPERTY()
 	class UItem_CharacterSkillBase* SkillHas;
+
+	/** @brief 스킬 발동을 위해 필요한 스킬 마나 량. HUD에서만 사용 */
+	UPROPERTY()
+	float SkillManaUsage;
+
+	UPROPERTY(BlueprintReadWrite, Category = "Inventory|Skill", meta = (BindWidget))
+	class UTextBlock* SkillManaUsageText;
 };
